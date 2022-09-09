@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="labelQuestao" destination="qVf-6i-odW" id="75A-pO-8CC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RANDOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXL-8o-V4R">
+                    <rect key="frame" x="109" y="57" width="196" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pergunta?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVf-6i-odW">
+                    <rect key="frame" x="20" y="438" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaH-pf-bbC">
+                    <rect key="frame" x="20" y="712" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="2Yb-Ge-AbX"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="MP0-hi-MyU"/>
+                        <constraint firstAttribute="height" constant="150" id="hdW-aI-b3l"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemGreenColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="80"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="actionPositiva:" destination="-1" eventType="touchUpInside" id="o2z-ZB-s4b"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klH-Fp-2yI">
+                    <rect key="frame" x="244" y="712" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="gQY-MQ-Pnl"/>
+                        <constraint firstAttribute="height" constant="150" id="qdB-5l-Rkt"/>
+                        <constraint firstAttribute="width" constant="150" id="zlC-uq-Bez"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system" title="">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="80"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="actionNegativa:" destination="-1" eventType="touchUpInside" id="od3-Xa-tRl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="klH-Fp-2yI" secondAttribute="trailing" constant="20" id="CDC-rZ-wcx"/>
+                <constraint firstItem="klH-Fp-2yI" firstAttribute="leading" secondItem="FaH-pf-bbC" secondAttribute="trailing" constant="74" id="Emx-b5-bjD"/>
+                <constraint firstItem="qVf-6i-odW" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="F3g-G8-i69"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qVf-6i-odW" secondAttribute="trailing" constant="20" id="Sxc-aF-gna"/>
+                <constraint firstItem="pXL-8o-V4R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="13" id="doC-3E-g8X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="klH-Fp-2yI" secondAttribute="bottom" id="hdf-h1-zHw"/>
+                <constraint firstItem="qVf-6i-odW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qsv-pr-vwW"/>
+                <constraint firstItem="FaH-pf-bbC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="r2R-vc-0V3"/>
+                <constraint firstItem="pXL-8o-V4R" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="wLP-nh-zFO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FaH-pf-bbC" secondAttribute="bottom" id="wU6-JZ-UUk"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
